@@ -29,5 +29,5 @@ app.get('/', (req,res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Server listening on the ${process.env.REACT_APP_BACKEND_URL ? process.env.REACT_APP_BACKEND_URL : "http://localhost"}:${port}`);
+    console.log(`Server listening on the ${process.env.REACT_APP_BACKEND_URL ? process.env.REACT_APP_BACKEND_URL : "http://localhost"}:${process.env.port}`);
 });
