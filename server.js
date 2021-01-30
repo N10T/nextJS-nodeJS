@@ -24,9 +24,10 @@ app.post('/api/users', (req, res) => {
 });
 
 app.get('/', (req,res) => {
+  console.log("TENTATIVE DE INDEX");
   res.sendFile(path.join(__dirname, '../my-app/out/index.html'));
 });
 
 app.listen(port, () => {
-    console.log(`Server listening on the http://localhost:${port}`);
+    console.log(`Server listening on the ${process.env.REACT_APP_BACKEND_URL ? process.env.REACT_APP_BACKEND_URL : "http://localhost"}:${port}`);
 });
